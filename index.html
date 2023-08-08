@@ -34,8 +34,12 @@
 			box-shadow: 0 0 1px 1px #2f2d35;
 		}
 
+		#waiting {
+			font-size: large;
+			color: #e0e0e0;
+		}
+
 		#disclaimer {
-			padding-top: 125px;
 			color: #e0e0e0;
 		}
 
@@ -171,8 +175,8 @@
     <meta property="og:description" content="ביבי רץ נגד המחאה גרסאת 2023" />
     <meta property="og:image" content="https://ido.wtf/sunbird/static/images/bibirun.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ido.wtf/sunbird/bibirun" />
-    <meta property="og:updated_time" content="2023-07-28T13:00:00+00:00" />
+    <meta property="og:url" content="https://sunbirdstudio.github.io/bibirun" />
+    <meta property="og:updated_time" content="2023-08-08T13:00:00+00:00" />
 <link id='-gd-engine-icon' rel='icon' type='image/png' href='bibirun.icon.png' />
 <link rel='apple-touch-icon' href='bibirun.apple-touch-icon.png'/>
 
@@ -182,7 +186,8 @@
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
 	</canvas>
-		<p id="disclaimer">הבהרה: משחק זה אינו מעודד אלימות בשום צורה, לא כלפי מפגינים ולא כלפי אנשי ציבור</p>
+	<p id="waiting">המשחק נטען, נא להמתין</p>
+	<p id="disclaimer">הבהרה: משחק זה אינו מעודד אלימות בשום צורה, לא כלפי מפגינים ולא כלפי אנשי ציבור</p>
 
 	<div id='status'>
 			<div class="loader-container" id="loader-container">
@@ -342,20 +347,6 @@
 		})();
 
 	//]]></script>
-
-	<script>
-		function shareResults(number, total ) {
-    let shareResult =
-	 'ביבי רץ: נעצרתי בזכות ההפגנה!' + "\n" +
-'הצלחתי לדרוך על ${numOfWordale} מפגינים בריצה אחת' + "\n" +
-'סך הכל ${total} מפגינים כבר ספגו את נחת רגל עד שהובסתי' + "\n" +
-'👩🏾‍🤝‍👨🏻👩🏼‍🤝‍👩🏾👨🏽‍🤝‍👨🏾🇮🇱🇮🇱' + "\n" +
-"\n" +
-'חושבים שאתם יכולים יותר טוב?' + "\n" +
-'ביבי רץ:' + "\n" +
-'https://ido.wtf/sunbird/bibirun/' + "\n";
-    navigator.clipboard.writeText(shareResult);
-}	</script>
 
 	<script type="module">
 		// Import the functions you need from the SDKs you need
