@@ -3,7 +3,8 @@
 <head>
 	<meta charset='utf-8' />
 	<meta name='viewport' content='width=device-width, user-scalable=no' />
-	<title>BibiRun, Sunbird</title>
+	<meta name='keywords' content='Bibirun, Bibi Run, ביביראן, ביבירץ, ביבי ראן, ביבי רץ'>
+	<title>BibiRun, Sunbird Studio</title>
 	<style type='text/css'>
 
 		body {
@@ -169,26 +170,66 @@
   z-index: 3; /* Add a higher z-index to place it above the static part */
 
 }
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
 	</style>
     <meta property="og:site_name" content="ביבי רץ, סאנבירד">
     <meta property="og:title" content="ביבי רץ, סאנבירד" />
-    <meta property="og:description" content="ביבי רץ נגד המחאה גרסאת 2023" />
+    <meta property="og:description" content="ביבי רץ נגד המחאה גרסת 2023" />
     <meta property="og:image" content="https://ido.wtf/sunbird/static/images/bibirun.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sunbirdstudio.github.io/bibirun" />
     <meta property="og:updated_time" content="2023-08-08T13:00:00+00:00" />
 <link id='-gd-engine-icon' rel='icon' type='image/png' href='bibirun.icon.png' />
 <link rel='apple-touch-icon' href='bibirun.apple-touch-icon.png'/>
+<script>
+	if (location.protocol !== 'https:') {
+		location.replace(`https:${location.href.substring(location.protocol.length)}`);
+	}
+</script>
 
 </head>
 <body>
+	<p id="web-description" class="screen-reader-text">
+		ביבי רץ נגד המחאה גרסת 2023 <br />
+		Bibi runs against the protesters version 2023.
+	</p>
+	<p id="waiting">המשחק נטען, נא להמתין</p>
+	<p id="disclaimer">הבהרה: משחק זה אינו מעודד אלימות בשום צורה, לא כלפי מפגינים ולא כלפי אנשי ציבור</p>
+
 	<canvas id='canvas'>
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
 	</canvas>
-	<p id="waiting">המשחק נטען, נא להמתין</p>
-	<p id="disclaimer">הבהרה: משחק זה אינו מעודד אלימות בשום צורה, לא כלפי מפגינים ולא כלפי אנשי ציבור</p>
-
+	
 	<div id='status'>
 			<div class="loader-container" id="loader-container">
 			  <div class="loader-static"></div>
